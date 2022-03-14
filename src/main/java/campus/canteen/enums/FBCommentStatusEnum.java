@@ -1,4 +1,4 @@
-package campus.canteen.entity;
+package campus.canteen.enums;
 
 import campus.canteen.entity.feedback.FB;
 
@@ -12,13 +12,5 @@ public enum FBCommentStatusEnum {
     FBCommentStatusEnum(int code, String msg) {
         this.code = code;
         this.msg = msg;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public String getMsg() {
-        return msg;
     }
 }

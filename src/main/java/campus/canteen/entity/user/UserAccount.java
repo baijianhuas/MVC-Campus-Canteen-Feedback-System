@@ -9,7 +9,6 @@ import java.sql.Timestamp;
 public class UserAccount implements Serializable {
     private static final long serialVersionUID = -7413640669767387180L;
     private Integer id;
-    private Integer profileId;
     private String username;
     private String password;
     private String intro;

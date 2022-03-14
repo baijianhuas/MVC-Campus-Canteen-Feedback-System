@@ -1,15 +1,14 @@
 package campus.canteen.service.audience;
 
-import campus.canteen.dto.feedback.FBComment;
-import campus.canteen.dto.feedback.FBMainContent;
-import campus.canteen.dto.user.User;
-import campus.canteen.entity.feedback.FB;
+import campus.canteen.dto.feedback.FBCommentDTO;
+import campus.canteen.dto.feedback.FBMainContentDTO;
+import campus.canteen.dto.user.UserDTO;
 import campus.canteen.entity.feedback.FBStatistics;
 import campus.canteen.result.ResultBean;
 
 import java.util.List;
 
-public class FBBrowseService {
+public interface FBBrowseService {
 
     /**
      * 获得文章主体信息
@@ -17,9 +16,7 @@ public class FBBrowseService {
      * @param feedbackid
      * @return
      */
-    ResultBean<FBMainContent> getFBMainContent(int feedbackid) {
-        return null;
-    }
+    ResultBean<FBMainContentDTO> getFBMainContent(int feedbackid);
 
     /**
      * 获取文章统计信息
@@ -27,9 +24,7 @@ public class FBBrowseService {
      * @param feedbackid
      * @return 查询结果
      */
-    ResultBean<FBStatistics> getFBStatistics(int feedbackid) {
-        return null;
-    }
+    ResultBean<FBStatistics> getFBStatistics(int feedbackid);
 
     /**
      * 获取博主信息
@@ -37,9 +32,7 @@ public class FBBrowseService {
      * @param feedbackid 文章id
      * @return 查询结果
      */
-    ResultBean<User> getUser(int feedbackid) {
-        return null;
-    }
+    ResultBean<UserDTO> getUser(int feedbackid);
 
     /**
      * 获得文章评论列表
@@ -47,9 +40,7 @@ public class FBBrowseService {
      * @param feedbackid 文章id
      * @return 查询结果
      */
-    ResultBean<List<FBComment>> listFBComment(int feedbackid) {
-        return null;
-    }
+    ResultBean<List<FBCommentDTO>> listFBComment(int feedbackid);
 
     /**
      * 持久化评论记录，同时文章评论次数加一
@@ -60,9 +51,7 @@ public class FBBrowseService {
      * @param feedbackid          被评论文章id
      * @return 操作结果
      */
-    ResultBean<Void> insertComment(String content, int spokesmanId, int listenerId, int feedbackid) {
-        return null;
-    }
+    ResultBean<Void> insertComment(String content, int spokesmanId, int listenerId, int feedbackid);
 
     /**
      * 文章被分享，分享次数加一
@@ -70,9 +59,7 @@ public class FBBrowseService {
      * @param feedbackid 文章id
      * @return 操作结果
      */
-    ResultBean<Void> insertShareCountIncrement(int feedbackid) {
-        return null;
-    }
+    ResultBean<Void> insertShareCountIncrement(int feedbackid);
 
     /**
      * 持久化赞赏记录，同时文章赞赏次数加一
@@ -83,9 +70,7 @@ public class FBBrowseService {
      * @param money    金额
      * @return 操作结果
      */
-    ResultBean<Void> insertAdmire(int feedbackid, int paierId, int earnerId, float money) {
-        return null;
-    }
+    ResultBean<Void> insertAdmire(int feedbackid, int paierId, int earnerId, float money);
 
     /**
      * 持久化文章收藏记录，同时文章收藏次数加一
@@ -96,9 +81,7 @@ public class FBBrowseService {
      * @param categoryId 收藏到自己的哪一个类别之下
      * @return 执行结果
      */
-    ResultBean<Void> insertCollect(int feedbackid, int cllocterId, String reason, int categoryId) {
-        return null;
-    }
+    ResultBean<Void> insertCollect(int feedbackid, int cllocterId, String reason, int categoryId);
 
     /**
      * 投诉文章，同时投诉记录加一
@@ -108,7 +91,5 @@ public class FBBrowseService {
      * @param reason       投诉理由
      * @return 执行结果
      */
-    ResultBean<Void> insertComplain(int feedbackid, int complainerId, String reason) {
-        return null;
-    }
+    ResultBean<Void> insertComplain(int feedbackid, int complainerId, String reason);
 }

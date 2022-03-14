@@ -1,4 +1,4 @@
-package campus.canteen.entity;
+package campus.canteen.enums;
 
 import campus.canteen.entity.feedback.FB;
 

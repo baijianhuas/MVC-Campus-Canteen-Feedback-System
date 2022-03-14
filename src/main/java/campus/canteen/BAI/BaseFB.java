@@ -1,6 +1,6 @@
 package campus.canteen.BAI;
 
-public class BaseFB<T> {
+public interface BaseFB<T> {
 
     int update(T t) ;
 
